@@ -5,9 +5,21 @@ This project demonstrates a basic Hardhat use case. It comes with a sample contr
 Try running some of the following tasks:
 
 ```shell
-npx hardhat help
+//Test
 npx hardhat test
-REPORT_GAS=true npx hardhat test
+
+//Compile after a change
+npx hardhat compile
+
+//Start node
 npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
+
+//Make sure that ./ignition/parameters.json has the correct params
+
+//Deploy
+npx hardhat ignition deploy ./ignition/modules/Lock.ts --network localhost --parameters ./ignition/parameters.json
+
+//Copy ./artifacts/contracts/Lock.sol/Lock.json abi list to client/src/utils/Lock_ABI.json
+
+//Copy deployed address to client/src/utils/constants.js
 ```
